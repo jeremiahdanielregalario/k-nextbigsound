@@ -39,18 +39,18 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use SQLite database
-# db = SQL("sqlite:///accounts.db")
-# dbs = SQL("sqlite:///nbs.db")
+db = SQL("sqlite:///accounts.db")
+dbs = SQL("sqlite:///nbs.db")
 # db = SQL("sqlite:///" + os.path.join(os.getcwd(), 'accounts.db'))
 # dbs = SQL("sqlite:///" + os.path.join(os.getcwd(), 'nbs.db'))
 
-# Update database path to use the /tmp directory
-db_path = os.path.join('/tmp', 'accounts.db')
-dbs_path = os.path.join('/tmp', 'nbs.db')
+# # Update database path to use the /tmp directory
+# db_path = os.path.join('/tmp', 'accounts.db')
+# dbs_path = os.path.join('/tmp', 'nbs.db')
 
-# Initialize the databases
-db = SQL(f"sqlite:///{db_path}")
-dbs = SQL(f"sqlite:///{dbs_path}")
+# # Initialize the databases
+# db = SQL(f"sqlite:///{db_path}")
+# dbs = SQL(f"sqlite:///{dbs_path}")
 
 @app.route("/")
 @login_required

@@ -1,28 +1,66 @@
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+# KPOP Next Big Sound
 
-# Flask + Vercel
+#### Description: A web application utilizing the Python-based web framework Flask, that tracks and ranks social metrics and statistics of KPOP artists. The data used in this were personally compiled by me since year 2020 and 2021 by web-scraping and utilizing API from nextbigsound.com and guyso.me. This web application is essentially helpful for people in the KPOP community to help them keep track of their idol's engagement and performance in the different social platforms. This web app utilizes Bootstrap 4.5.3, PostgreSQL as database and JavaScript with JQuery. It has built-in support feature for logging in/out and signing up as well as changing passwords.
 
-This example shows how to use Flask 3 on Vercel with Serverless Functions using the [Python Runtime](https://vercel.com/docs/concepts/functions/serverless-functions/runtimes/python).
+## Files
 
-## Demo
+### `project/static`
+##### Static folder holds the pictures, icons, fonts and stylesheets which I produced for my web application.
+#### `style.css`
+##### Here lies the custom styles which I incorporated in my web app. The style which I used is minimalist and minimally change the built in Bootstrap css.
 
-https://flask-python-template.vercel.app/
+### `project/templates`
+#### `login.html`
+##### This renders the login page when the web app prompts for login.
 
-## How it Works
+#### `apology.html`
+##### This renders the apology page when there are errors reported from the web app, specifying the code and the type of error.
 
-This example uses the Web Server Gateway Interface (WSGI) with Flask to enable handling requests on Vercel with Serverless Functions.
+#### `change_pass.html`
+##### Idea from CS50 Finance. This renders the page where users can change their passwords.
 
-## Running Locally
+#### `index.html`
+##### This renders the landing page showing the summary of the charts and their ranked tabulation which is sortable by utilizing PostgreSQL and JQuery.
 
-```bash
-npm i -g vercel
-vercel dev
-```
+#### `smi.html`
+##### This renders the breakdown of the Social Metrics Chart every month of 2021 which is sortable as well by utilizing PostgreSQL and JQuery.
 
-Your Flask application is now available at `http://localhost:3000`.
+#### `cmb.html`
+##### This renders the breakdown of the Combined Chart every month of 2021 which is sortable as well by utilizing PostgreSQL and JQuery.
 
-## One-Click Deploy
+#### `search.html`
+##### Allows the user to search for the specific data that they want by specifying the artist, chart type and the month they are looking for.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+#### `searched.html`
+##### The rendering page of `search.html` via `POST` method whic shows te data the user prompted.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fpython%2Fflask3&demo-title=Flask%203%20%2B%20Vercel&demo-description=Use%20Flask%203%20on%20Vercel%20with%20Serverless%20Functions%20using%20the%20Python%20Runtime.&demo-url=https%3A%2F%2Fflask3-python-template.vercel.app%2F&demo-image=https://assets.vercel.com/image/upload/v1669994156/random/flask.png)
+#### `layout.html`
+##### Serves as the template of the HTML files using the Jinja2 syntax.
+
+#### `register.html`
+##### Allows the user to sign up for a new account and access data by logging in.
+
+## `project`
+
+#### `application.py`
+##### Python program which handles most of the functions using Flask. This receives input and gives output based on the user's prompt
+
+#### `helpers.py`
+##### An aiding program to the `application.py` which contains helping functions for convenient coding.
+
+#### `nbs.db`
+##### PostgreSQL database that stores data of Next Big Sound web app and returns valus when queried nby user
+
+#### `accounts.db`
+##### PostgreSQL database that stores data of accounts that signs in the web app
+
+#### `requirements.txt`
+##### Written here are the required libraries/frameworks for the web app.
+
+
+
+
+
+
+
+

@@ -261,9 +261,9 @@ def register():
             # Query database to insert username and hashed password
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             return redirect("/index")
-        except:
+        except Exception as e:
             # Notify that the username is already registered
-            return apology("You're already registered!")
+            return apology(f"You're already registered! {e}")
 
         # Redirect user to home page
         return redirect("/index")

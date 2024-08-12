@@ -88,7 +88,6 @@ def smi():
         
 
 @app.route("/cmb", methods=["GET", "POST"])
-@login_required
 def cmb():
     """Social Metrics Index"""
 

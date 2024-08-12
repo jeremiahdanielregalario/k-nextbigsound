@@ -60,7 +60,7 @@ def home():
 
 
 @app.route("/index")
-@login_required
+# @login_required
 def index():
     """Show summary of chart"""
 
@@ -73,7 +73,7 @@ def index():
 
 
 @app.route("/smi", methods=["GET", "POST"])
-@login_required
+# @login_required
 def smi():
     """Social Metrics Index"""
 
@@ -90,7 +90,7 @@ def smi():
         
 
 @app.route("/cmb", methods=["GET", "POST"])
-@login_required
+# @login_required
 def cmb():
     """Social Metrics Index"""
 
@@ -274,7 +274,7 @@ def register():
 
 
 @app.route("/changePass", methods=["GET", "POST"])
-# @login_required
+@login_required
 def changePass():
     """ Change Password """
 

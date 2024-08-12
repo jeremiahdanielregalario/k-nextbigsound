@@ -8,6 +8,7 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
 from werkzeug.security import check_password_hash, generate_password_hash
+from sqlalchemy import URL, create_engine
 
 from helpers import apology, login_required, usd, num, form, sort_smi, sort_nbs, sort_cmb, get
 
@@ -60,7 +61,6 @@ def home():
 
 
 @app.route("/index")
-@login_required
 def index():
     """Show summary of chart"""
 
@@ -73,7 +73,6 @@ def index():
 
 
 @app.route("/smi", methods=["GET", "POST"])
-@login_required
 def smi():
     """Social Metrics Index"""
 

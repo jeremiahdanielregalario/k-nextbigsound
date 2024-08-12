@@ -44,11 +44,11 @@ Session(app)
 # db = SQL("sqlite:///" + os.path.join(os.getcwd(), 'accounts.db'))
 # dbs = SQL("sqlite:///" + os.path.join(os.getcwd(), 'nbs.db'))
 
-# Ensure the databases are located in the current working directory
-db_path = os.path.join(os.getcwd(), 'accounts.db')
-dbs_path = os.path.join(os.getcwd(), 'nbs.db')
+# Update database path to use the /tmp directory
+db_path = os.path.join('/tmp', 'accounts.db')
+dbs_path = os.path.join('/tmp', 'nbs.db')
 
-# Use the correct path to connect to SQLite databases
+# Initialize the databases
 db = SQL(f"sqlite:///{db_path}")
 dbs = SQL(f"sqlite:///{dbs_path}")
 

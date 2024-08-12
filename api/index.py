@@ -53,14 +53,14 @@ dbs = SQL("sqlite:///nbs.db")
 # dbs = SQL(f"sqlite:///{dbs_path}")
 
 @app.route("/")
-# @login_required
+@login_required
 def home():
     """Redirect to index"""
     return redirect("index.html")
 
 
 @app.route("/index")
-# @login_required
+@login_required
 def index():
     """Show summary of chart"""
 
@@ -73,7 +73,7 @@ def index():
 
 
 @app.route("/smi", methods=["GET", "POST"])
-# @login_required
+@login_required
 def smi():
     """Social Metrics Index"""
 
@@ -90,7 +90,7 @@ def smi():
         
 
 @app.route("/cmb", methods=["GET", "POST"])
-# @login_required
+@login_required
 def cmb():
     """Social Metrics Index"""
 

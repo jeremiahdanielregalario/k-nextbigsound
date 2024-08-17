@@ -69,3 +69,8 @@ if __name__ == '__main__':
         index = info['index']
         db.execute('INSERT INTO nbs (artist, smi, cmb, ind) VALUES (?, ?, ?, ?)', artist, smi, cmb, index)
         
+        
+        
+pass
+...
+        
